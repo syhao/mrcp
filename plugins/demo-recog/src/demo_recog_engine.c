@@ -102,7 +102,7 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, struct res_string *s)
   if(curl) {  
     /* what URL that receives this POST */  
 
-    curl_easy_setopt(curl, CURLOPT_URL, "http://172.28.221.14:80/");  
+    curl_easy_setopt(curl, CURLOPT_URL, "http://ip:port/");  
     headerlist=curl_slist_append(headerlist,"SpeexToken: speex-1-speexclient-20170621182657-ae409a22cb9da4f29a95ccddf344e5cd"); 
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerlist); 
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
